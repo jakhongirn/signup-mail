@@ -43,9 +43,9 @@ app.post("/", function(req, res){
    
     const request = https.request(url, options, function(response) {
       if (response.statusCode == 200) {
-        res.send("Successfully subscribed!")
+        res.sendFile(__dirname + "/success.html")
       } else {
-        res.send("Oops... There was an error with signing up. Please, try again.")
+        res.sendFile(__dirname + "/error.html")
       }
 
       response.on("data", function(data) {
@@ -56,8 +56,6 @@ app.post("/", function(req, res){
     request.write(jsonData);
     request.end();
     
-    if (res)
-    res.send("Thank you for signing up! Stay tuned!")
 })
 
 app.listen(3000, function () {
