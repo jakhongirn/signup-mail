@@ -49,6 +49,8 @@ app.post("/", function(req, res){
     
     request.write(jsonData);
     request.end();
+    
+    res.send("Thank you for signing up! Stay tuned!")
 })
 
 app.listen(3000, function () {
