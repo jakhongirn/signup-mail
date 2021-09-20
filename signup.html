@@ -68,14 +68,14 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="public/css/styles.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body class="text-center">
     <main class="form-signin">
-      <form>
+      <form action="/" method="post">
         <img
           class="mb-4"
-          src="public/images/ez-logo.jpg"
+          src="images/ez-logo.jpg"
           alt=""
           width="100"
           height="100"
@@ -85,8 +85,8 @@
         <div class="form-floating">
           <input
             type="text"
+            name="firstName"
             class="form-control"
-            id="floatingInput"
             placeholder="First Name"
             required
             autofocus
@@ -96,8 +96,8 @@
         <div class="form-floating">
           <input
             type="text"
+            name="secondName"
             class="form-control"
-            id="floatingInput"
             placeholder="Second Name"
           />
           <label for="floatingInput">Second Name</label>
@@ -106,8 +106,8 @@
         <div class="form-floating">
           <input
             type="email"
+            name="email"
             class="form-control"
-            id="floatingInput"
             placeholder="Email"
           />
           <label for="floatingInput">Email</label>
