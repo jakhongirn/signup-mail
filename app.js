@@ -17,7 +17,22 @@ app.post("/", function(req, res){
     const secondName = req.body.secondName;
     const email = req.body.email;
 
-    console.log(firstName, secondName, email);
+    const data = {
+      members: [
+        {
+          email_address : email,
+          status : "subscribed"
+          merge_fields: {
+            FNAME : firstName,
+            LNAME : secondName,
+          }
+        }
+        
+      ]
+    };
+
+    const jsonData = JSON.stringify(data)
+
 })
 
 app.listen(3000, function () {
