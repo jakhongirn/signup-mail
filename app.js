@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.send("Yay. It's working...");
+  res.sendFile(__dirname + "/signup.html")
 });
 
 app.listen(3000, function () {
